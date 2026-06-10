@@ -26,10 +26,18 @@ const Footer = () => {
   ]
 
   const socialIcons = [
-    { icon: FacebookIcon, url: '#', label: 'Facebook' },
-    { icon: TwitterIcon, url: '#', label: 'Twitter' },
-    { icon: LinkedInIcon, url: '#', label: 'LinkedIn' },
-    { icon: GitHubIcon, url: '#', label: 'GitHub' },
+    { icon: FacebookIcon,
+      url: '#',
+      label: 'Facebook' },
+    { icon: TwitterIcon, 
+      url: '#', 
+      label: 'Twitter' },
+    { icon: LinkedInIcon,
+      url: 'https://www.linkedin.com/company/abira-technologies/', 
+      label: 'LinkedIn' },
+    { icon: GitHubIcon, 
+      url: '#', 
+      label: 'GitHub' },
   ]
 
   const containerVariants = {

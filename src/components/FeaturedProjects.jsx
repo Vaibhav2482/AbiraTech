@@ -13,11 +13,11 @@ const FeaturedProjects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Warehouse Analytics Dashboard',
-      subtitle: 'Real-time warehouse visibility and operational insights',
+      title: 'Inventory Analytics Dashboard',
+      subtitle: 'Real-time inventory visibility and operational insights',
       tech: ['React', 'ASP.NET Core', 'SQL Server'],
       image: warehouseImg,
-      description: 'A premium analytics platform designed for warehouse performance and accuracy.',
+      description: 'A premium analytics platform designed for inventory performance and accuracy.',
     },
     {
       id: 2,

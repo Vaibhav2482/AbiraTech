@@ -34,8 +34,10 @@ const Logo = ({ size = 46 }) => {
           sx={{
             color: '#FFFFFF',
             fontSize: {
-              xs: '1.9rem',
-              md: '1.5rem',
+              xs: '0.75rem', // Mobile
+              sm: '0.9rem',  // Small tablet
+              md: '1rem',    // Tablet
+              lg: '1.15rem', // Desktop
             },
             fontWeight: 700,
           }}

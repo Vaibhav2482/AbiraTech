@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Box, Container, Typography, Button, useMediaQuery, useTheme } from '@mui/material'
 
-const ContactCTA = () => {
+const ContactCTA = ({ onOpenContactDialog }) => {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('md'))
 
@@ -122,6 +122,7 @@ const ContactCTA = () => {
             }}
           >
             <Button
+              onClick={() => onOpenContactDialog?.('contact')}
               sx={{
                 backgroundColor: 'white',
                 color: '#FF9A1F',
@@ -144,6 +145,7 @@ const ContactCTA = () => {
             </Button>
 
             <Button
+              onClick={() => onOpenContactDialog?.('scheduleCall')}
               sx={{
                 backgroundColor: 'transparent',
                 color: 'white',

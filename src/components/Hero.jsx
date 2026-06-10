@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Box, Container, Button, Typography, useMediaQuery, useTheme } from '@mui/material'
 
-const Hero = () => {
+const Hero = ({ onOpenContactDialog }) => {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('md'))
 
@@ -120,8 +120,9 @@ const Hero = () => {
           </motion.div>
 
           {/* CTA Buttons */}
-          <motion.div variants={itemVariants} style={{ display: 'flex', gap: '1rem', flexDirection: isMobile ? 'column' : 'row', justifyContent: isMobile ? 'center' : 'flex-start' }}>
+          <motion.div variants={itemVariants} style={{ display: 'flex', gap: '1rem', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'left' }}>
             <Button
+              onClick={() => onOpenContactDialog?.('contact')}
               variant="contained"
               sx={{
                 backgroundColor: '#FF9A1F',
@@ -138,29 +139,7 @@ const Hero = () => {
                   boxShadow: '0 12px 24px rgba(255, 154, 31, 0.22)',
                 },
                 transition: 'all 0.3s ease',
-              }}
-            >
-              Start a Project
-            </Button>
-
-            <Button
-              variant="outlined"
-              sx={{
-                color: '#FFFFFF',
-                borderColor: '#FFFFFF',
-                px: { xs: 3, md: 4 },
-                py: 1.5,
-                fontSize: '1rem',
-                fontWeight: 600,
-                borderRadius: '4px',
-                textTransform: 'none',
-                border: '2px solid #FFFFFF',
-                '&:hover': {
-                  backgroundColor: '#FFFFFF',
-                  color: '#050505',
-                  transform: 'translateY(-4px)',
-                },
-                transition: 'all 0.3s ease',
+                minWidth: isMobile ? '100%' : 'auto',
               }}
             >
               Contact Us

@@ -6,7 +6,7 @@ import CloseIcon from '@mui/icons-material/Close'
 import Logo from './Logo'
 import './Header.css'
 
-const Header = () => {
+const Header = ({ onOpenContactDialog }) => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const theme = useTheme()
@@ -44,6 +44,10 @@ const Header = () => {
         ))}
       </List>
       <Button
+        onClick={() => {
+          onOpenContactDialog?.('contact')
+          handleDrawerToggle()
+        }}
         variant="contained"
         sx={{
           backgroundColor: '#FF9A1F',
@@ -54,7 +58,7 @@ const Header = () => {
           fontWeight: 600,
         }}
       >
-        Start Project
+        Contact Us
       </Button>
     </Box>
   )
@@ -134,6 +138,7 @@ const Header = () => {
                 transition={{ delay: 0.3 }}
               >
                 <Button
+                  onClick={() => onOpenContactDialog?.('contact')}
                   variant="contained"
                   sx={{
                     backgroundColor: '#FF9A1F',
@@ -149,7 +154,7 @@ const Header = () => {
                     },
                   }}
                 >
-                  Start a Project
+                  Contact Us
                 </Button>
               </motion.div>
             )}
